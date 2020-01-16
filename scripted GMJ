@@ -8,11 +8,12 @@
 			stage(kode_cloud){
 				steps{
 			  git credentialsId: 'github', url: 'https://github.com/SangramVicky/6pmwebapp'
-			}}
+			}
+			}
 			
 		stage(build){
 			steps{
-					sh label: '', script: "${mvnHome}/bin/mvn clean package"
+					sh "mvn clean package"
 						}
 			}	
 		
