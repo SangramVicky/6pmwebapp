@@ -1,0 +1,10 @@
+node{
+    def mvnHome =  tool name: 'maven11', type: 'maven'
+    stage('git'){
+        git credentialsId: 'github', url: 'https://github.com/SangramVicky/6pmwebapp'
+    }
+    stage('maven'){
+        sh label: '', script: "${mvnHome}/bin/mvn clean package"
+        
+    }
+}
