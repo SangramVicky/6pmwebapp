@@ -1,7 +1,7 @@
  pipeline{
 	agent any
 	 	stages{
-			stage(code cloud){
+			stage(kode_cloud){
 			steps{
 			  git credentialsId: 'github', url: 'https://github.com/SangramVicky/6pmwebapp'
 			}
