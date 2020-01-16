@@ -4,7 +4,8 @@
 			stage(kode_cloud){
 				steps{
 			  git credentialsId: 'github', url: 'https://github.com/SangramVicky/6pmwebapp'
-			}
+			}}
+			
 		stage(build){
 			steps{
 				script{
@@ -13,7 +14,7 @@
 			}
 			}
 			}	
-		}
+		
 		}
 		
 			
