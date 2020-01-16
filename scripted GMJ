@@ -1,5 +1,9 @@
  pipeline{
 	agent any
+	environment{
+		PATH = "${PATH}:${tool name: 'maven11', type: 'maven'}/bin"
+		}
+		
 	 	stages{
 			stage(kode_cloud){
 				steps{
@@ -8,11 +12,8 @@
 			
 		stage(build){
 			steps{
-				script{
-				def mvnHome =  tool name: 'maven11', type: 'maven'
-			sh label: '', script: "${mvnHome}/bin/mvn clean package"
-			}
-			}
+					sh label: '', script: "${mvnHome}/bin/mvn clean package"
+						}
 			}	
 		
 		}
