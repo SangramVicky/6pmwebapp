@@ -1,4 +1,4 @@
-pipeline{
+ pipeline{
     agent any
     environment{
 		PATH = "${PATH}:${tool name: 'maven11', type: 'maven'}/bin"
